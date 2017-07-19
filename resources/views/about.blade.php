@@ -79,7 +79,7 @@
 
     <div class="content">
         <div class="title m-b-md">
-            Dis Yo MuhFuckin Bout PAGE Cuh!!
+            Dis Yo MuhFuckin Bout PAGE Cuh!! {{$name}}
         </div>
 
         <div class="links">
