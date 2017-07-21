@@ -11,12 +11,34 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+//Route::get('/', function () {
+//    return view('welcome');
+//});
 
 Route::get('/about', function() {
-   return view('about', [
+
+    return view('about', [
+
        'name' => 'MasterBrue'
-   ]);
+
+    ]);
+
+});
+
+Route::get('/tasks', function () {
+
+    $tasks = DB::table('tasks')->get();
+
+    return view('welcome', compact('tasks'));
+
+});
+
+Route::get('/stuff/{id}', function ($id) {
+
+    dd($id);
+
+    $tasks = DB::table('tasks')->get();
+
+    return view('welcome', compact('tasks'));
+
 });
