@@ -25,13 +25,13 @@ Route::get('/about', function() {
 
 });
 
-Route::get('/tasks', function () {
-
-    $tasks = DB::table('tasks')->get();
-
-    return view('welcome', compact('tasks'));
-
-});
+//Route::get('/tasks', function () {
+//
+//    $tasks = DB::table('tasks')->get();
+//
+//    return view('welcome', compact('tasks'));
+//
+//});
 
 Route::get('/stuff/{id}', function ($id) {
 
@@ -42,3 +42,7 @@ Route::get('/stuff/{id}', function ($id) {
     return view('welcome', compact('tasks'));
 
 });
+
+Route::get('/tasks', 'TasksController@index');
+
+Route::get('/stuff/{id}', 'TasksController@stuff');
